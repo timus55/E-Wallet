@@ -1,0 +1,266 @@
+<app-general-header></app-general-header>
+<br/>
+<br/><br/>
+
+<!-- <h1 style="text-align:center; color:rgb(217, 0, 224)">Please fill out your details and we will come back to you</h1> -->
+<h2 style="text-align: center;">Thanks for choosing our Online Wallet</h2>
+
+<div class="container">
+    <div class="row">
+
+<!-- mat form for signup page 
+adding() will call for performing the action-->
+
+
+<div class="col-lg-6">
+<form class="example-form" [className]="'style2'" [formGroup]="signup" (ngSubmit)="addUser()" >
+   
+<mat-form-field class="example-full-width">
+      <!-- name field -->
+        <mat-label class="i1">First Name*:</mat-label>
+      <input matInput placeholder="Ram" formControlName="firstName">
+      <!-- mat icon is being used for displaying the small icons for better understanding for the user -->
+      <mat-icon matSuffix>person_outline</mat-icon>
+      <mat-hint>User Name in characters only</mat-hint>
+      <!-- validation such as required minlength and maxlength too -->
+      <mat-error *ngIf="signup.get('firstName').hasError('required')">
+        First Name is Required!
+      </mat-error>
+      <mat-error *ngIf="signup.get('firstName').hasError('minlength')">
+        First Name should be atleast 2 characters long!
+      </mat-error>
+  
+      <mat-error *ngIf="signup.get('firstName').hasError('maxlength')">
+        First Name can be atmax 20 characters long!
+      </mat-error>
+  
+      <mat-error *ngIf="signup.get('firstName').hasError('pattern')">
+        First Name must contains charatcers only.
+      </mat-error>
+      </mat-form-field>
+    <br/>
+    <br/>
+      <!-- name field ends -->
+      <mat-form-field class="example-full-width">
+        <!--Last name field -->
+          <mat-label class="i1">Last Name*:</mat-label>
+        <input matInput placeholder="Kumar" formControlName="lastName">
+        <!-- mat icon is being used for displaying the small icons for better understanding for the user -->
+        <mat-icon matSuffix>person_add</mat-icon>
+        <mat-hint>Last Name in characters only</mat-hint>
+        <!-- validation such as required minlength and maxlength too -->
+        <mat-error *ngIf="signup.get('lastName').hasError('required')">
+          Last Name is Required!
+        </mat-error>
+        <mat-error *ngIf="signup.get('lastName').hasError('minlength')">
+          Last Name should be atleast 2 characters long!
+        </mat-error>
+    
+        <mat-error *ngIf="signup.get('lastName').hasError('maxlength')">
+          Last Name can be atmax 20 characters long!
+        </mat-error>
+    
+        <mat-error *ngIf="signup.get('lastName').hasError('pattern')">
+          Last Name must contains charatcers only.
+        </mat-error>
+    </mat-form-field>    
+    <!-- Last name field ends -->
+    <br/>
+    <br/>
+      <mat-form-field class="example-full-width">
+        <!-- email address field -->
+        <mat-label class="i1">Username*:</mat-label>
+        <input matInput type="email" placeholder="username@gmail.com" formControlName="username">
+        <mat-icon matSuffix>mail_outline</mat-icon>
+        <mat-hint>Input the fully qualified email address</mat-hint>
+        <mat-error *ngIf="signup.get('username').hasError('required')">
+          Username ID is Required!
+        </mat-error>
+        <mat-error *ngIf="signup.get('username').hasError('minlength')">
+          Username should be atleast 4 characters long!
+        </mat-error>
+    
+        <mat-error *ngIf="signup.get('username').hasError('maxlength')">
+         Username can be atmax n characters long!
+        </mat-error>
+        <mat-error *ngIf="signup.get('username').hasError('pattern')">  
+          Username must follow this pattern!
+        </mat-error>
+        <!-- email address field ends -->
+      </mat-form-field>
+      <br/>
+    <br/>
+      <mat-form-field class="example-full-width">
+        <!-- password field -->
+        <mat-label class="i1">Password*:</mat-label>
+        <input matInput  type="password" placeholder="*******" formControlName="password">
+        <mat-icon matSuffix>lock</mat-icon>
+        <mat-hint>Do not share to anyone</mat-hint>
+        <mat-error *ngIf="signup.get('password').hasError('required')">
+          Password is Required!
+        </mat-error>
+        <mat-error *ngIf="signup.get('password').hasError('minlength')">
+          Password should be atleast 8 characters long!
+        </mat-error>
+    
+        <mat-error *ngIf="signup.get('password').hasError('maxlength')">
+          Password can be atmax 20 characters long!
+        </mat-error>
+    
+        <mat-error *ngIf="signup.get('password').hasError('pattern')">
+        Password must follow this pattern!
+        </mat-error>
+        <!-- password field ends -->
+      </mat-form-field>
+      <br/>
+      <br/>
+   
+        <mat-form-field class="example-full-width">
+          <!-- Mobile field -->
+          <mat-label class="i1">Mobile Number*:</mat-label>
+          <input matInput  type="text" placeholder="ex:9876879761" formControlName="mobile" maxlength="10">
+          <mat-icon matSuffix>smartphone</mat-icon>
+          <mat-hint>Important for usage of wallet services</mat-hint>
+          <mat-error *ngIf="signup.get('mobile').hasError('required')">
+            Mobile Number is Required!
+          </mat-error>
+          <mat-error *ngIf="signup.get('mobile').hasError('minlength')">
+            Mobile Number should be atleast 10 digits long!
+          </mat-error>
+      
+          <mat-error *ngIf="signup.get('mobile').hasError('maxlength')">
+            Mobile can be atmax 10 digits long!
+          </mat-error>
+      
+          <mat-error *ngIf="signup.get('mobile').hasError('pattern')">
+          Mobile Number must starts with 6,7,8 or 9!
+          </mat-error>
+          <!-- Mobile  field ends -->
+        </mat-form-field>
+       
+
+      <br/>
+    <br/>
+
+    <mat-form-field class="example-full-width">
+      <!-- Mobile field -->
+      <mat-label class="i1">Aadhar Number*:</mat-label>
+      <input matInput  type="text" placeholder="ex:987687921761" formControlName="aadhar" maxlength="12">
+      <mat-icon matSuffix>comment</mat-icon>
+      <mat-hint>Do not share to anyone</mat-hint>
+      <mat-error *ngIf="signup.get('aadhar').hasError('required')">
+        Aadhar card is Required!
+      </mat-error>
+      <mat-error *ngIf="signup.get('aadhar').hasError('minlength')">
+        Aadhar card should be atleast 12 digits long!
+      </mat-error>
+  
+      <mat-error *ngIf="signup.get('aadhar').hasError('maxlength')">
+        Aadhar can be atmax 12 digits long!
+      </mat-error>
+  
+      <mat-error *ngIf="signup.get('aadhar').hasError('pattern')">
+      Aadhar Number must follow the pattern!
+      </mat-error>
+      <!-- Mobile  field ends -->
+    </mat-form-field>
+   
+
+  <br/>
+<br/>
+        <mat-form-field class="example-full-width">
+          <!-- Balance field -->
+          <mat-label class="i1">Account Balance*:</mat-label>
+          <input matInput  type="text" placeholder="ex:1001" formControlName="balance" maxlength="5">
+          <mat-icon matSuffix>account_balance_wallet</mat-icon>
+          <mat-hint>Do not share to anyone</mat-hint>
+          <mat-error *ngIf="signup.get('balance').hasError('required')">
+            Balance is Required!
+          </mat-error>
+          <mat-error *ngIf="signup.get('balance').hasError('minlength')">
+            balance should be atleast 2 digits long!
+          </mat-error>
+      
+          <mat-error *ngIf="signup.get('balance').hasError('maxlength')">
+            Balance can be atmax 5 characters long!
+          </mat-error>
+      
+          <mat-error *ngIf="signup.get('balance').hasError('pattern')">
+          Balance Number must contains digits only!
+          </mat-error>
+          <!-- Mobile  field ends -->
+        </mat-form-field>
+       
+        <div class="col-lg-11">
+            <div class="input-group mb-3 input-field">
+                <span style="margin-top: 20px; margin-left:2px;">Choose Security Question</span>
+                <select formControlName="securityQ">
+
+                    <option *ngFor="let question of securityQuestion" [ngValue]="question">
+                        {{ question }}
+                    </option>
+                </select>
+                <hr>
+            </div>
+            <!-- Validation Messages -->
+            <div *ngIf="submitted && signup.controls.securityQ.errors">
+                <div class="text-danger" *ngIf="signup.controls.securityQ.errors.required">
+                    Security Question is required ..!
+                </div>
+
+            </div>
+
+        </div>
+
+        <mat-form-field class="example-full-width">
+            <!-- Balance field -->
+            <mat-label class="i1">Security Answer*:</mat-label>
+            <input matInput  type="text" placeholder="java" formControlName="securityA">
+            <mat-icon matSuffix>question_answer</mat-icon>
+            <mat-hint>Do not share to anyone</mat-hint>
+            <mat-error *ngIf="signup.get('securityA').hasError('required')">
+                Security ANswer is Required!
+            </mat-error>
+          
+        
+          
+        
+            
+            <!-- Mobile  field ends -->
+          </mat-form-field>
+
+ 
+        <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
+                <div style="margin-top:20px">
+                    <input type="radio" value="user" formControlName="role"> User
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" value="admin" formControlName="role"> Admin
+                </div>
+                
+        </div>
+        <!-- Validation Messages -->
+        <div *ngIf="submitted && signup.controls.role.errors">
+            <div class="text-danger" *ngIf="signup.controls.role.errors.required">
+                Role is required ..!
+            </div>
+            
+        </div>
+    <br/>
+    <br/>
+<!-- save button to save the inputs -->
+      <button class="btn btn-success" type="submit" id="save">Register</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <!-- to reset the data being entered -->
+      <button class="btn btn-danger" type="reset">Cancel</button> &nbsp; &nbsp; &nbsp;
+       <a routerLink="/loginByNumber"><button class="btn btn-info" >Login</button></a> &nbsp; &nbsp; &nbsp;
+      <!-- to navigate to the result page -->
+      <!-- <a class="btn btn-warning" routerLink="/home">Already have an Account</a> <br/><br/> -->
+  </form>
+  </div>
+  <div class="col-lg-6">
+    <img class="m" src="assets/images/signup.gif">  
+    </div>
+  </div>
+  </div>
+
+ 

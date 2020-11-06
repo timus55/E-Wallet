@@ -1,0 +1,115 @@
+<app-general-header></app-general-header>
+<br/><br/><br/><br/>
+<div class="container">
+	<div class="row">
+		<!-- mat form for signup page 
+adding() will call for performing the action-->
+		<form class="example-form" [className]="'style2'" [formGroup]="loginFormByNumber" (ngSubmit)="loginByNumber()">
+			<div class="col-lg-6 col-xs-12 col-sm-12">
+				<br /><br />
+				<mat-form-field class="example-full-width" style="width: 200%;">
+					<!-- Mobile field -->
+					<mat-label class="i1">Mobile Number*:</mat-label>
+					<input matInput type="text" placeholder="ex:9876879761" formControlName="mobile" maxlength="10">
+					<mat-icon matSuffix>smartphone</mat-icon>
+					<mat-hint>Do not share to anyone</mat-hint>
+					<mat-error *ngIf="loginFormByNumber.get('mobile').hasError('required')">
+						Mobile Number is Required!
+					</mat-error>
+					<mat-error *ngIf="loginFormByNumber.get('mobile').hasError('minlength')">
+						Mobile Number should be atleast 10 digits long!
+					</mat-error>
+
+					<mat-error *ngIf="loginFormByNumber.get('mobile').hasError('maxlength')">
+						Mobile can be atmax 10 digits long!
+					</mat-error>
+
+					<mat-error *ngIf="loginFormByNumber.get('mobile').hasError('pattern')">
+						Mobile Number must starts with 6,7,8 or 9!
+					</mat-error>
+					<!-- Mobile  field ends -->
+				</mat-form-field>
+				<br />
+				<br />
+				<mat-form-field class="example-full-width" style="width: 200%;">
+					<!-- password field -->
+					<mat-label class="i1">Password*:</mat-label>
+					<input matInput type="password" placeholder="*******" formControlName="password">
+					<mat-icon matSuffix>lock</mat-icon>
+					<mat-hint>Do not share to anyone</mat-hint>
+					<mat-error *ngIf="loginFormByNumber.get('password').hasError('required')">
+						Password is Required!
+					</mat-error>
+					<mat-error *ngIf="loginFormByNumber.get('password').hasError('minlength')">
+						Password should be atleast 8 characters long!
+					</mat-error>
+
+					<mat-error *ngIf="loginFormByNumber.get('password').hasError('maxlength')">
+						Password can be atmax 20 characters long!
+					</mat-error>
+
+					<mat-error *ngIf="loginFormByNumber.get('password').hasError('pattern')">
+						Password must follow this pattern!
+					</mat-error>
+					<!-- password field ends -->
+				</mat-form-field>
+				<br />
+				<br />
+			</div>
+
+			<button class="btn btn-success b1" type="submit" id="save">Login</button>&nbsp;&nbsp;
+			<!-- to reset the data being entered -->
+			<button class="btn btn-danger b1" type="reset">Cancel</button>&nbsp;&nbsp;
+			<a routerLink="/signup"><button class="btn btn-warning b1">Register new Account</button></a>
+			<br />
+			<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a routerLink="/forgotPassword"><button class="btn btn-info">Forgot password</button></a>
+			<br /><br />
+
+
+		</form>
+		<!-- <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="margin-left:auto; margin-right:0;">
+			<img src="assets/images/wallet.gif">
+		</div> -->
+		<div class="slidebox col-lg-6 col-md-12 col-xs-12 col-sm-12">
+
+			<div class="main">
+
+
+				<div class="slider">
+
+					<figure>
+						<img src="assets/images/slide1.jpg">
+						<img src="assets/images/slide5.gif">
+						<img src="assets/images/slide3.jpg">
+						<img src="assets/images/slide4.gif">
+						<img src="assets/images/slide2.jpg">
+					</figure>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+
+	<div class="row">
+		<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+			<h3 class="sign">Or Sign In using</h3>
+			<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a routerLink="/loginByUsername"><button mat-fab color="primary" matTooltip="Sign In using Username"
+					matTooltipClass="example-tooltip-red" class="example-button">
+					<mat-icon>email</mat-icon>
+				</button></a>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<a routerLink="/loginByAadhar"><button mat-fab color="accent" matTooltip="Sign In using Aadhar Card"
+					matTooltipClass="example-tooltip-red" class="example-button">
+					<mat-icon>message</mat-icon>
+				</button></a>
+
+
+		</div>
+	</div>
+</div>

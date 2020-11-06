@@ -1,0 +1,73 @@
+<app-header></app-header>
+<br/>
+<br/>
+<div class="col-12  scroll b">
+    
+    <div class="row">
+        <div class="col-12 bg-info text-light" style="text-align: center" >
+            <h5><strong>User List</strong></h5>
+        </div>
+        <hr />
+    </div> 
+    <br/>
+    <table class="table table-striped table-bordered" style="border-color:aquamarine">
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Username</th>
+                <th>Balance</th>
+                <th>Mobile</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let u of users">
+                <td>{{u.firstName}}</td>
+                <td>{{u.lastName}}</td>
+                <td>{{u.username}}</td>
+                <td>{{u.balance}}</td>
+                <td>{{u.mobile}}</td>
+                <td><button (click)="disableUser(u.mobile)" class="btn btn-danger">Disable</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- <div class="row " *ngFor="let user of Users">
+        <div class="card bg-secondary col-12 " style="margin-bottom: 50px;">
+            
+
+            <div class="row">
+                <div class="col-12 text-light">
+                    <div class="row">
+                        <div class="col-2">
+                            Firstname:{{user.firstName}}
+                            
+                        </div>
+                        <div class="col-2">
+                            Lastname:{{user.lastName}}
+                            
+                        </div>
+                        <div class="col-2">
+                            Username:{{user.username}}
+                            
+                        </div>
+                        <div class="col-2">
+                            Balance:{{user.balance}}
+                            
+                        </div>
+                       
+                        <div class="col-2">
+                            Mobile:{{user.mobile}}
+                        </div>
+                        <div class="col-2 "  style="text-align: center;">
+                            <button class="btn btn-danger">Disable User </button>
+                        </div> 
+                    </div>
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>  
+    </div> -->
+</div>

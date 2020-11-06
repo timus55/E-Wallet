@@ -1,0 +1,331 @@
+<app-header></app-header>
+<div class="animated">
+
+
+    <div class="container-fluid" style="margin-bottom: 5%; ">
+
+
+
+        <br>
+        <!-- Start of card view -->
+        <div class="container mt-5" *ngIf="this.view">
+            <!--             
+            <div class="col-sm-12" >
+                <div class="card" style="border-radius: 1%;">
+                  <div class="card-body align-items-center d-flex justify-content-center" >
+                    <h5 class="card-title">Transfer to Friend</h5>
+                   
+                  </div>
+                </div>
+              </div>
+            <br /><br /> -->
+
+            <br />
+            <h1 class="card-title">Transfer to Friend</h1>
+
+            <img src="assets/images/friend.jfif" alt="" height="100" width="150">
+
+
+            <div class="container">
+                <br />
+
+                <div class="row">
+                    <form class="example-form" [className]="'style2'" [formGroup]="transferFunds"
+                        (ngSubmit)="transferFriend()">
+                        <div class="col-lg-6 col-xs-12 col-sm-12">
+                            <br /><br />
+                            <mat-form-field class="example-full-width" style="width: 200%;">
+                                <mat-label class="i1">Receivers Mobile*:</mat-label>
+                                <input matInput type="text" placeholder="ex:9876879761" formControlName="mobile"
+                                    maxlength="10">
+                                <mat-icon matSuffix>smartphone</mat-icon>
+                                <mat-error *ngIf="transferFunds.get('mobile').hasError('required')">
+                                    Mobile Number is Required!
+                                </mat-error>
+                                <mat-error *ngIf="transferFunds.get('mobile').hasError('minlength')">
+                                    Mobile Number should be atleast 10 digits long!
+                                </mat-error>
+
+                                <mat-error *ngIf="transferFunds.get('mobile').hasError('maxlength')">
+                                    Mobile can be atmax 10 digits long!
+                                </mat-error>
+
+                                <mat-error *ngIf="transferFunds.get('mobile').hasError('pattern')">
+                                    Mobile Number must starts with 6,7,8 or 9!
+                                </mat-error>
+                            </mat-form-field>
+                            <br />
+                            <br />
+
+                            <mat-form-field class="example-full-width" style="width: 200%;">
+                                <mat-label class="i1">Amount*:</mat-label>
+                                <input matInput type="text" placeholder="ex: 1000/-" formControlName="amount"
+                                    maxlength="5">
+                                <mat-icon matSuffix>attach_money</mat-icon>
+                                <mat-error *ngIf="transferFunds.get('amount').hasError('required')">
+                                    Amount is Required!
+                                </mat-error>
+                                <mat-error *ngIf="transferFunds.get('amount').hasError('minlength')">
+                                    Amount should be atleast 1 digits long!
+                                </mat-error>
+
+                                <mat-error *ngIf="transferFunds.get('amount').hasError('maxlength')">
+                                    Amount can be atmax 5 characters long!
+                                </mat-error>
+
+                                <mat-error *ngIf="transferFunds.get('amount').hasError('pattern')">
+                                    Amount Number must contains digits only!
+                                </mat-error>
+
+                            </mat-form-field>
+                            <mat-form-field class="example-full-width" style="width: 200%;">
+                                <mat-label class="i1">Pin*:</mat-label>
+                                <input matInput type="password" placeholder="***" formControlName="pin" maxlength="4">
+                                <mat-icon matSuffix>lock</mat-icon>
+                                <mat-hint>Do not share to anyone</mat-hint>
+                                <mat-error *ngIf="transferFunds.get('pin').hasError('required')">
+                                    pin is Required!
+                                </mat-error>
+                                <mat-error *ngIf="transferFunds.get('pin').hasError('minlength')">
+                                    pin should be atleast 8 characters long!
+                                </mat-error>
+
+                                <mat-error *ngIf="transferFunds.get('pin').hasError('maxlength')">
+                                    pin can be atmax 20 characters long!
+                                </mat-error>
+
+
+
+                            </mat-form-field>
+                            <br />
+                            <br />
+                        </div>
+
+                        <button class="btn btn-success b1" type="submit" id="transfer">Transfer</button>&nbsp;&nbsp;
+                        <button class="btn btn-danger b1" type="reset">Cancel</button>&nbsp;&nbsp;
+                        <br />
+                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <!-- <a routerLink="/forgotPassword"><button class="btn btn-warning">Forgot Pin</button></a>
+                        <br /><br /> -->
+                        <td> <button type="button" class="btn btn-outline-add btn-warning " data-toggle="modal"
+                                data-target=".bd-example-modal-lg">Forgot Pin</button></td>
+
+                    </form>
+
+                    <div class="images col-lg-6 col-md-12 col-xs-12 col-sm-12">
+
+                        <img src="assets/images/transfer.gif" height="400" width="600">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+
+
+            </div>
+
+        </div>
+        <!-- End of card view -->
+
+        <!-- Start of list view -->
+        <div class="container mt-5" *ngIf="this.view==false">
+            <br />
+            <h1 class="card-title">Transfer to Bank</h1>
+            <img src="assets/images/bank.jfif" alt="" height="100" width="150">
+
+            <div class="container">
+                <div class="row">
+                    <form class="example-form" [className]="'style2'" [formGroup]="transferToBank"
+                        (ngSubmit)="transferBank()">
+                        <div class="col-lg-6 col-xs-12 col-sm-12">
+                            <br />
+                            <mat-form-field class="example-full-width" style="width: 200%;">
+                                <mat-label class="i1">Card Number*:</mat-label>
+                                <input matInput type="text" placeholder="ex:9876879761" formControlName="cardnumber"
+                                    maxlength="16">
+                                <mat-icon matSuffix>smartphone</mat-icon>
+                                <mat-error *ngIf="transferToBank.get('cardnumber').hasError('required')">
+                                    cardnumber Number is Required!
+                                </mat-error>
+                                <mat-error *ngIf="transferToBank.get('cardnumber').hasError('minlength')">
+                                    cardnumber Number should be atleast 10 digits long!
+                                </mat-error>
+
+                                <mat-error *ngIf="transferToBank.get('cardnumber').hasError('maxlength')">
+                                    cardnumber can be atmax 10 digits long!
+                                </mat-error>
+
+                                <mat-error *ngIf="transferToBank.get('cardnumber').hasError('pattern')">
+                                    cardnumber Number must starts with 6,7,8 or 9!
+                                </mat-error>
+                            </mat-form-field>
+                            <br />
+                            <br />
+
+                            <mat-form-field class="example-full-width" style="width: 200%;">
+                                <mat-label class="i1">Amount*:</mat-label>
+                                <input matInput type="text" placeholder="ex:1000/-" formControlName="amount"
+                                    maxlength="5">
+                                <mat-icon matSuffix>attach_money</mat-icon>
+                                <mat-error *ngIf="transferToBank.get('amount').hasError('required')">
+                                    Amount is Required!
+                                </mat-error>
+                                <mat-error *ngIf="transferToBank.get('amount').hasError('minlength')">
+                                    Amount should be atleast 1 digits long!
+                                </mat-error>
+
+                                <mat-error *ngIf="transferToBank.get('amount').hasError('maxlength')">
+                                    Amount can be atmax 5 characters long!
+                                </mat-error>
+
+                                <mat-error *ngIf="transferToBank.get('amount').hasError('pattern')">
+                                    Amount Number must contains digits only!
+                                </mat-error>
+
+                            </mat-form-field>
+                            <mat-form-field class="example-full-width" style="width: 200%;">
+                                <mat-label class="i1">Pin*:</mat-label>
+                                <input matInput type="password" placeholder="***" formControlName="pin" maxlength="4">
+                                <mat-icon matSuffix>lock</mat-icon>
+                                <mat-hint>Do not share to anyone</mat-hint>
+                                <mat-error *ngIf="transferToBank.get('pin').hasError('required')">
+                                    pin is Required!
+                                </mat-error>
+                                <mat-error *ngIf="transferToBank.get('pin').hasError('minlength')">
+                                    pin should be atleast 8 characters long!
+                                </mat-error>
+
+                                <mat-error *ngIf="transferToBank.get('pin').hasError('maxlength')">
+                                    pin can be atmax 20 characters long!
+                                </mat-error>
+
+
+
+                            </mat-form-field>
+                            <br />
+                            <br />
+                        </div>
+
+                        <button class="btn btn-success b1" type="submit" id="transfer">Transfer</button>&nbsp;&nbsp;
+                        <button class="btn btn-danger b1" type="reset">Cancel</button>&nbsp;&nbsp;
+                        <br />
+                        <br />
+                        <td> <button type="button" class="btn btn-outline-add btn-warning " data-toggle="modal"
+                                data-target=".bd-example-modal-lg">Forgot Pin</button></td>
+
+                        <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button class="btn btn-warning">Forgot Pin</button></a>
+                        <br /><br /> -->
+
+
+                    </form>
+
+                    <div class="images col-lg-6 col-md-12 col-xs-12 col-sm-12">
+
+                        <img src="assets/images/bank.gif" height="400" width="600">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+
+
+            </div>
+        </div>
+
+        <br /><br />
+        <div class="row">
+            <div class="col-sm-4 offset-2">
+                <div class="card rounded">
+                    <div class="card-body align-items-center d-flex justify-content-center">
+                        <h1 class="card-title">Transfer to Friend</h1>
+                        <i class="offset-md-1" style="margin-top: 1%;" (click)="toggleViewCard()">
+                            <img src="assets/images/friend.jfif" alt="" height="100" width="150"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body align-items-center d-flex justify-content-center">
+                        <h1 class="card-title">Transfer to Bank</h1>
+                        <i class="offset-md-1" style="margin-top: 1%;" (click)="toggleViewList()">
+                            <img src="assets/images/bank.jfif" alt="" height="100" width="150">
+                            &nbsp;</i>&nbsp;&nbsp;
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of list view -->
+        <!-- Start of More Details modal -->
+    </div>
+
+</div>
+
+<div style="margin-bottom: 5%;">
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Forgot Pin? Don't worry..!!</h5>
+                    <button type="button btn-outline-add " class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-content">
+                    <div class="container mt-5">
+                        <div class="card-group">
+
+                            <div class="card card-body "
+                                style="background-color: rgba(156, 139, 134, 0.281);border:5px outset white; border-radius: 10px;">
+
+                                <div class="card-body">
+                                    <div class="input-group input-group-lg">
+                                        <div class="input-group-prepend">
+                                            <!-- <span class="input-group-text">Password</span> -->
+                                        </div>
+                                        <!-- <form [formGroup]="pinForm" (ngSubmit)="getPin()">
+
+                                            <input type="password" class="form-control " placeholder="Enter your Password"
+                                                formControlName="password">
+
+
+                                        </form> -->
+                                        <form [formGroup]="pinForm" (ngSubmit)="getPin()">
+                                            <mat-form-field class="example-full-width">
+                                                <mat-label class="i1">Password*:</mat-label>
+                                                <input matInput type="password" placeholder="*******"
+                                                    formControlName="password">
+
+                                                <mat-hint>Do not share to anyone</mat-hint>
+                                                <mat-error *ngIf="pinForm.get('password').hasError('required')">
+                                                    Password is Required!
+                                                </mat-error>
+                                                <mat-error *ngIf="pinForm.get('password').hasError('minlength')">
+                                                    Password should be atleast 8 characters long!
+                                                </mat-error>
+
+                                                <mat-error *ngIf="pinForm.get('password').hasError('maxlength')">
+                                                    Password can be atmax 20 characters long!
+                                                </mat-error>
+
+                                                <mat-error *ngIf="pinForm.get('password').hasError('pattern')">
+                                                    Password must follow this pattern!
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </form>
+
+                                    </div>
+                                    <br>
+                                    <button class="btn btn-warning b1" type="submit" name="getpin"
+                                        (click)="getPin()">Get Pin</button>&nbsp;&nbsp;
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>

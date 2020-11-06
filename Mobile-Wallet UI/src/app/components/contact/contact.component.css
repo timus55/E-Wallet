@@ -1,0 +1,92 @@
+.c1
+{
+    width: 18em;
+    height: 12em;
+    color: darkmagenta;
+    margin-left: 2em;
+    border-radius: 1cm;
+
+}
+.h1
+{
+    margin-left: 1em;
+    color:forestgreen;
+    
+}
+.d1
+{
+    margin-left: 1em;
+    color:firebrick;
+    
+}
+.p1
+{
+    margin-left: 2.5em;
+    color:black;
+    font-style: bold;
+    
+}
+.p2
+{
+    margin-left: 2.5em;
+    color: rgb(0, 0, 0);
+    font-style: bold;
+    
+}
+.p3
+{
+    margin-left: 2.5em;
+    font-style: bold;
+    color:black;
+    
+}
+.h2 
+{
+    margin-left: 1.3em;
+    color: blue;
+}
+.h3 
+{
+    margin-left: 1.5em;
+    color:purple;
+}
+.h4 
+{
+    margin-left: 1.7em;
+    color:darkblue;
+}
+.h5 
+{
+    margin-left: 2.1em;
+    color: red;
+    
+    
+}
+.i1
+{
+    height: 25%;
+    width: 65%;
+margin-left: 2.8em;
+margin-bottom: 0.5cm;
+    border-radius: 0.5cm;
+}
+.s1
+{
+    margin-left: 2em;
+    color:purple;
+    font-size: 22px;
+    margin-bottom: 0.5cm;
+    
+}
+.sp
+{
+    margin-left: 3.5em;
+    color:black;
+    font-size: 18px;
+    
+}
+
+.b
+{
+    min-height: 100vh;
+}

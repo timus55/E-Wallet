@@ -1,0 +1,106 @@
+<app-header></app-header>
+<div class="animated">
+
+    <h2 class="text-center mt-3">Add Cards</h2>
+    <hr>
+
+    <div class="row">
+        <div class="col-lg-6 col-md-6">
+            <form [formGroup]="addcard" (ngSubmit)="addCard()">
+                <div class="form-group row">
+                    <label for="number" class="col-lg-4 text-right font-weight-bold">
+                        CARD NO :
+                    </label>
+                    <div class="col-lg-8">
+                        <input type="text" class="form-control " placeholder="1234567890123456"
+                            formControlName="cardNumber" maxlength="16">
+                        <div *ngIf="submitted && addcard.controls.cardNumber.errors">
+                            <div class="text-danger" *ngIf="addcard.controls.cardNumber.errors.required">
+                                <h6>Mandatory Field</h6>
+                            </div>
+                            <div class="text-danger" *ngIf="addcard.controls.cardNumber.errors.pattern">
+                                <h6>Card number should be 16 digit</h6>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <label for="holderName" class="col-lg-4 text-right font-weight-bold">
+                        HOLDER :
+                    </label>
+                    <div class="col-lg-8">
+                        <input type="text" class="form-control " placeholder="Sumeet Patil"
+                            formControlName="holderName" />
+                        <div *ngIf="submitted && addcard.controls.holderName.errors">
+                            <div class="text-danger" *ngIf="addcard.controls.holderName.errors.required">
+                                <h6>Mandatory Field</h6>
+                            </div>
+                        </div>
+
+
+                        <label for="expMonth" class="col-lg-4 text-right font-weight-bold">
+                            EXP MONTH :
+                        </label>
+                        <div class="col-lg-8">
+                            <input type="text" class="form-control " placeholder="04" formControlName="expMonth" />
+                            <div *ngIf="submitted && addcard.controls.expMonth.errors">
+                                <div class="text-danger" *ngIf="addcard.controls.expMonth.errors.required">
+                                    <h6>Month can't be empty</h6>
+                                </div>
+                            </div>
+
+
+                            <label for="expYear" class="col-lg-4 text-right font-weight-bold">
+                                EXP YEAR :
+                            </label>
+                            <div class="col-lg-8">
+                                <input type="text" class="form-control " placeholder="2021" formControlName="expYear"
+                                    maxlength="4">
+                                <div *ngIf="submitted && addcard.controls.expYear.errors">
+                                    <div class="text-danger" *ngIf="addcard.controls.expYear.errors.required">
+                                        <h6>Mandatory Field</h6>
+                                    </div>
+                                </div>
+
+
+                                <label for="cvv" class="col-lg-4 text-right font-weight-bold">
+                                    CVV :
+                                </label>
+                                <div class="col-lg-8">
+                                    <input type="password" class="form-control " placeholder="***" formControlName="cvv"
+                                        maxlength="3">
+                                    <div *ngIf="submitted && addcard.controls.cvv.errors">
+                                        <div class="text-danger" *ngIf="addcard.controls.cvv.errors.required">
+                                            <h6>Provide cvv</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <button class="btn btn-outline-add" type="submit">Save card</button>
+                                        <button class="btn btn-outline-delete" (click)="addMoney()">Add Money to
+                                            wallet</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+        <div class="col-lg-6 col-md-6">
+            <div class="side">
+                <img src="assets/images/card2.gif">
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6 col-md-6">
+        <div class="side">
+            <img src="assets/images/card2.gif" style="border-radius: 0.7cm;">
+        </div>
+    </div>
+</div>

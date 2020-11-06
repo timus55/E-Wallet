@@ -1,0 +1,40 @@
+<app-header></app-header>
+<div class="animated b">
+    <br/><br/><br/>
+    <h1 style="text-align: center; color:rgb(33, 23, 46)">Your current balance: {{this.message}}/- </h1>
+    <h2 class="text-center mt-3">Your Cards</h2>
+    <hr>
+    <div class="container mt-5">
+        <div class="card-group" *ngFor="let c of cards">
+
+            <div class="col-12 rowCard" >
+                <div class="card card-body "
+                    style="background-color: rgba(0, 0, 0, 0.021);border:5px outset white; border-radius: 10px;">
+                    <div class="card-body">
+                        <h3 class=" cardData textSize">Card No - {{c.cardNumber}} </h3>
+                        <h4 class=" cardData textSize">Holder's Name  {{c.holderName}}</h4>
+                        <h5 class="cardData textSize">Valid Thru {{c.expMonth}}/{{c.expYear}}</h5>
+                        <hr>
+                    </div>
+                    <div class="row-1">
+                         <button class="btn btn-outline-delete1" (click)="addMoney(c.cardNumber,c.cvv)"
+                        >+ Add Money From this Card To Wallet</button>
+                       
+                        <br>
+                        <button class="btn btn-outline-delete" (click)="delete(c.cardNumber)"
+                            type="submit">Delete This Card</button>
+                          
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-add"  (click)="addCard()"
+        type="submit">+ Add New Card</button>
+        <button class="btn btn-outline-delete2" (click)="deleteAll()"
+        type="submit">Delete All Cards</button>
+       
+</div>
+    
+ 
+</div>
+

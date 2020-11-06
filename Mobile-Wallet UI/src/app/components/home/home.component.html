@@ -1,0 +1,114 @@
+<app-header></app-header>
+<section class="feature-section spad">
+    <div class="container">
+        <div class="feature-item">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img style="border-radius: 1cm;"src="assets/images/balance.jpg" alt="">
+                </div>
+                <div class="col-lg-6">
+                    <div class="feature-text">
+                        <h2 style="color: firebrick;">Wanna Check your balance</h2>
+                        <p>You can check your account balance online anytime—and much more. Mobile phones, tablets, and other devices make it easy to check on accounts from just about anywhere.</p>
+                       <!-- router to check balance -->
+                        <a class="class1"  routerLink="/view-cards" style="font-size: larger;"><button class="btn btn-info" style="border-radius: 0.7cm;">Check Your Balance Now</button></a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="feature-item">
+            <div class="row">
+                <div class="col-lg-6 order-lg-2">
+                    <img style="border-radius: 1cm;" class="loan" src="assets/images/transfer.jpg" alt="">
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="feature-text">
+                        <h2 style="color: indigo;">Transfer funds to loved ones</h2>
+                        <p>This pandemic brings financial crises for everyone. Transfer funds to your loved ones to help them now.</p>
+                        <!-- router to apply loan page -->
+                        <a class="class2" routerLink="/transfer" style="font-size: larger;"><button class="btn btn-info" style="border-radius: 0.7cm;">Transfer funds Now</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="feature-item">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img style="border-radius: 1cm;" class="loan" src="assets/images/show.webp" alt="">
+                </div>
+                <div class="col-lg-6">
+                    <div class="feature-text">
+                        <h2 style="color: rgb(100, 0, 100);">Show Transactions (Mini Statement)</h2>
+                        <p>Innovil Wallet provides its account holders with mini statement service to enquire about the recent transactions made using the account. This helps in saving time.</p>
+                        <!-- router to show the transactions -->
+                        <a class="class3" routerLink="/transaction"  style="font-size: larger;"><button class="btn btn-info" style="border-radius: 0.7cm;">Show your monthly transactions</button></a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="feature-item">
+            <div class="row">
+                <div class="col-lg-6 order-lg-2">
+                    <img style="border-radius: 1cm;" class="loan" src="assets/images/change.jpg" alt="">
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="feature-text">
+                        <h2 style="color: rgb(255, 122, 74);">Edit User Details</h2>
+                        <p>Innovil Wallet understands that every customer is unique and has individual requirements. That is why we allow you to customize your details whenever you wish to.
+                            Want to change your name or any other details, Do it now.
+                        </p>
+                        <!-- route to calculate the EMI page -->
+                        <a class="class4" routerLink="/editUser" style="font-size: larger;"><button class="btn btn-info" style="border-radius: 0.7cm;">Edit User details</button></a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="feature-item">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img style="border-radius: 1cm;" class="loan"src="assets/images/addcards2.gif" alt="">
+                </div>
+                <div class="col-lg-6">
+                    <div class="feature-text">
+                        <h2 style="color: rgb(252, 70, 130);">Add Money</h2>
+                        <p>We value our customer's time. So no need to enter card details everytime while payment. Innovil Wallet give you the functionality to add money directly using saved cards. </p>
+                      <!-- route to pay the EMI for the loan -->
+                        <a class="class5" routerLink="/view-cards" style="font-size: larger;"><button class="btn btn-info" style="border-radius: 0.7cm;">Add Money now..!!</button></a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-item">
+            <div class="row">
+                <div class="col-lg-6 order-lg-2">
+                    <img style="border-radius: 1cm;" class="loan" src="assets/images/viewcards1.gif" alt="">
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="feature-text">
+                        <h2 style="color: red;">View all your saved cards</h2>
+                        <p>List out all the saved cards in your Wallet account.Wanna delete any saved cards, Don't worry, deleting any card is just simple as clicking on a button.</p>
+                        <!-- foreclose page -->
+                        <a class="class6" routerLink="/view-cards" style="font-size: larger;"><button class="btn btn-info" style="border-radius: 0.7cm;">View All Cards now.!</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="feature-item">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img style="border-radius: 1cm;" class="loan"src="assets/images/admin.jpg" alt="">
+                </div>
+                <div class="col-lg-6">
+                    <div class="feature-text">
+                        <h2 style="color: rgb(252, 70, 130);">Admin Module..</h2>
+                        <p>Hey..!! Are you an admin? If yes, then this functionality is just for you..!! Come check it out all the users and track suspicious activities if any. </p>
+                      <!-- route to pay the EMI for the loan -->
+                        <button class=
+                            "btn btn-info" (click)="getRole()">Admin Special Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

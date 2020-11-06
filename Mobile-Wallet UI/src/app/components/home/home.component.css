@@ -1,0 +1,127 @@
+.style1 {
+    font-family: Arial;
+    font-size: 10px;;
+    word-spacing: 1;
+    color: palegreen;
+    text-align: left;
+    margin-left: -20px;
+
+}
+.style2 {
+    font-family:Cambria;
+    font-size: 10px;
+    word-spacing: 1;
+    color:crimson;
+    text-align: left;
+    margin: 10px;
+}
+
+.style3 {
+    font-family:unset;
+    font-size: 10px;
+    word-spacing: 1;
+    color:darkolivegreen;
+    text-align: left;
+    margin: 10px;
+}
+.style4 {
+    font-family:Franklin Gothic Medium;
+    font-size: 10px;
+    word-spacing: 1;
+    color:tomato;
+    text-align: left;
+    margin: 10px;
+}
+.style5 {
+    font-family:Georgia;
+    font-size: 10px;
+    word-spacing: 1;
+    color:navy;
+    text-align: left;
+    margin: 10px;
+}
+.style6 {
+    font-family:cursive;
+    font-size: 10px;
+    word-spacing: 1;
+    color:palevioletred;
+    text-align: left;
+    margin-left: 10px;
+}
+.style7
+{
+    height: 50%;
+    width: 100%;
+    
+}
+.style8
+{
+    height: 50%;
+    width: 100%;
+    margin-left: 10px;
+}
+
+  .feature-item {
+	margin-bottom: 70px;
+}
+
+.feature-text {
+	padding-top: 50px;
+}
+.spad {
+	padding-top: 102px;
+	padding-bottom: 102px;
+}
+.readmore {
+	font-size: 16px;
+	color: #f43f00;
+	font-weight: 900;
+}
+
+.readmore img {
+	padding-left: 6px;
+	margin-bottom: 0;
+}
+.loan
+
+{
+    width: 26em;
+    height:13em;
+}
+
+  A.class1 {color:red;}
+A.class1:link  {text-decoration: none; color: red;}
+A.class1:visited {text-decoration: none; color: darkblue;}
+A.class1:hover {text-decoration: underline; color: chocolate;}
+A.class1:active {text-decoration: none; color: purple;}
+
+
+A.class2 {color:rgb(117, 2, 133);}
+A.class2:link {text-decoration: none; color: forestgreen;}
+A.class2:visited {text-decoration: none; color: rgb(228, 17, 228);}
+A.class2:hover {text-decoration: underline; color: chocolate;}
+A.class2:active {text-decoration: none; color: purple;}
+
+A.class3 {color:blue;}
+A.class3:link {text-decoration: none; color: rgb(255, 0, 200);}
+A.class3:visited {text-decoration: none; color: rgb(163, 36, 136);}
+A.class3:hover {text-decoration: underline; color: chocolate;}
+A.class3:active {text-decoration: none; color: purple;}
+
+A.class4 {color:rgb(22, 22, 221);}
+A.class4:link {text-decoration: none; color: rgb(23, 112, 30);}
+A.class4:visited {text-decoration: none; color: forestgreen;}
+A.class4:hover {text-decoration: underline; color: chocolate;}
+A.class4:active {text-decoration: none; color: purple;}
+
+A.class5 {color:blue;}
+A.class5:link {text-decoration: none; color: blue;}
+A.class5:visited {text-decoration: none; color: darkcyan;}
+A.class5:hover {text-decoration: underline; color: chocolate;}
+A.class5:active {text-decoration: none; color: purple;}
+
+A.class6 {color:tomato;}
+A.class6:link {text-decoration: none; color: rgb(206, 12, 180);}
+A.class6:visited {text-decoration: none; color: tomato;}
+A.class6:hover {text-decoration: underline; color: chocolate;}
+A.class6:active {text-decoration: none; color: purple;}

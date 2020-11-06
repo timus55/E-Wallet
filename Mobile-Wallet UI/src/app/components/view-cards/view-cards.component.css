@@ -1,0 +1,145 @@
+.animated {
+    animation: transitionIn 0.75s;
+}
+
+h2{
+    margin-top: 20px;
+    padding-top: 20px;
+    text-align: center;
+    
+}
+.card{
+    min-height: 50px;
+    margin-top: 0px;
+    border: #000000;
+    margin-bottom: 60px;
+  
+}
+h3{
+    margin-top: -30px;
+    font-size: 20px;
+    text-transform: capitalize;
+    margin-bottom: 11px;
+    font-weight: 650;
+}
+h4{
+    
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 11px;
+    font-weight: 550;
+    
+}
+
+h5{
+    font-size: 15px;
+   
+    text-transform: capitalize;
+    
+    
+   
+}
+button[class = "btn btn-outline-delete"]{
+      
+    margin-top: 0px;
+  margin-left: 18px;
+  border:none;
+
+  outline: none;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  height: 35px;
+  width: 200px;
+  background: #dd0e0ed3;
+  color: #fff;
+  font-size: 15px;
+ border-radius: 0px;
+  }
+  button[class = "btn btn-outline-delete1"]{
+      
+    margin-top: -45px;
+  margin-left: -35px;
+  background: transparent;
+ 
+  font-weight: bold;
+  outline: thin;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  height: 20px;
+  width: 400px;
+  
+  color:  #19118d;
+  font-size: 18px;
+ border-radius: 0px;
+  }
+  button[class = "btn btn-outline-delete1"]:hover{
+    cursor: pointer;
+    font-size: 20px;
+background: #ffffff;
+color: #372347;
+}
+  button[class = "btn btn-outline-delete"]:hover{
+    cursor: pointer;
+    font-size: 18px;
+background: #ffffff;
+color: #ff1616;
+}
+
+button[class = "btn btn-add"]{
+  
+    
+    margin-top: -30px;
+
+  
+  border:none;
+  font-weight: bold;
+  outline: none;
+  margin-right:350px;
+  margin-left: 350PX;
+  margin-bottom: 40px;
+  height: 57px;
+  width: 400px;
+  
+  background: transparent;
+  color: #0c145e;
+  font-size: 28px;
+
+  }
+
+  button[class = "btn btn-add"]:hover{
+    cursor: pointer;
+    font-size: 30px;
+background: #ffffff;
+color: #2b163b;
+
+}
+
+button[class = "btn btn-outline-delete2"]{
+      
+    margin-top: -45px;
+    margin-right:350px;
+    margin-left: 350PX;
+  background: #cc0d0d;
+ 
+  
+  outline: thin;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  height: 40px;
+  width: 400px;
+  
+  color:  #ffffff;
+  font-size: 18px;
+ border-radius: 0px;
+  }
+  button[class = "btn btn-outline-delete2"]:hover{
+    cursor: pointer;
+    font-size: 20px;
+background: #ffffff;
+color: #ff1616;
+}
+
+.b
+{
+    min-height: 100vh;
+}

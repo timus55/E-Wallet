@@ -1,0 +1,56 @@
+<app-header></app-header>
+<div class="animated b">
+   
+    <h2 class="text-center mt-3">Add Money</h2>
+    <hr>
+   
+    <div class="row">
+    <div class="col-lg-6 col-md-6">
+        <form [formGroup]="addmoney" (ngSubmit)="addMoney()">
+            <div class="form-group row">
+                <label for="number" class="col-lg-4 text-right font-weight-bold">
+                    Amount :
+                </label>
+                <div class="col-lg-8">
+                    <input type="text" class="form-control " placeholder="₹"
+                    formControlName="amount" />
+              <div *ngIf="submitted && addmoney.controls.amount.errors">
+                <div class="text-danger" *ngIf="addmoney.controls.amount.errors.required">
+                        <h6>Mandatory Field</h6>
+                   </div>
+                   <div class="text-danger" *ngIf="addmoney.controls.amount.errors.pattern">
+                    <h6>Amount should be less than 10000</h6>
+               </div>
+                </div>
+            </div>
+
+            <label for="number" class="col-lg-4 text-right font-weight-bold">
+                CVV :
+            </label>
+            <div class="col-lg-8">
+                <input type="password" class="form-control " placeholder="***"
+                    formControlName="cvv" maxlength="3">
+              <div *ngIf="submitted && addmoney.controls.cvv.errors">
+                <div class="text-danger" *ngIf="addmoney.controls.cvv.errors.required">
+                        <h6>Mandatory Field</h6>
+                   </div>
+                   <div class="text-danger" *ngIf="addmoney.controls.cvv.errors.pattern">
+                    <h6>Cvv should be 3 digit</h6>
+               </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button class="btn btn-outline-add" type="submit">Confirm</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="col-lg-6 col-md-6">
+
+
+    <img src="assets/images/money.gif">
+</div> 
+</div>
+</div>

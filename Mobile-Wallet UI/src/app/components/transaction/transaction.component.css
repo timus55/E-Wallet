@@ -1,0 +1,73 @@
+
+  th {
+    background: #808000; /* Olive */
+    color: #FFFFFF; /* White */
+    border: 2px solid #FFFFFF; /* White */
+    background-image: url('http://www.photos-public-domain.com/wp-content/uploads/2011/03/olive-green-parchment-paper-texture.jpg');
+       background-repeat: no-repeat;
+}
+
+tr td {
+    opacity: 0.8;
+
+}
+
+/* Change the opacity of a row when it is hovered over */
+tr td:hover {
+    opacity: 2.5;
+    text-align: center;
+    font-size: 120%;
+}
+
+@media (max-width:600px)
+{
+    .table thead
+    {
+        display:none;
+    }
+    .table, .table tbody, .table tr, .table td
+    {
+        display: block;
+        width: 100%;
+
+    }
+    .table tr
+    {
+        margin-bottom: 15px;
+
+    }
+    .table td
+    {
+        text-align: right;
+        padding-left: 50%;
+        text-align: right;
+        position: relative;
+    }
+    .table td::before
+    {
+        content:attr(data-label);
+        background: #808000; /* Olive */
+    color: #FFFFFF; /* White */
+    
+    background-repeat: no-repeat;
+        background-image: url('http://www.photos-public-domain.com/wp-content/uploads/2011/03/olive-green-parchment-paper-texture.jpg');
+        position: absolute;
+        left: 0;
+        width: 30%;
+        padding-left: 15px;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+    .table th
+    {
+        text-align: left;
+        padding-left: 50%;
+        text-align: left;
+        position: relative;
+    }
+}
+
+.b{
+    min-height: 100vh;
+}

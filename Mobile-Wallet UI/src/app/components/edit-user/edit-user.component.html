@@ -1,0 +1,142 @@
+<app-header></app-header>
+<br />
+<br /><br />
+
+<h2 style="text-align: center;">Edit User Details</h2>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-lg-6">
+            <form class="example-form" [className]="'style2'" [formGroup]="editDetails" (ngSubmit)="editUser()">
+
+                <mat-form-field class="example-full-width">
+                    <!-- name field -->
+                    <mat-label class="i1">First Name*:</mat-label>
+                    <input matInput placeholder="Ram" formControlName="firstName">
+
+                    <mat-icon matSuffix>person_outline</mat-icon>
+                    <mat-hint>User Name in characters only</mat-hint>
+
+                    <mat-error *ngIf="submitted && editDetails.get('firstName').hasError('required')">
+                        First Name is Required!
+                    </mat-error>
+                    <mat-error *ngIf="editDetails.get('firstName').hasError('minlength')">
+                        First Name should be atleast 4 characters long!
+                    </mat-error>
+
+                    <mat-error *ngIf="editDetails.get('firstName').hasError('maxlength')">
+                        First Name can be atmax 20 characters long!
+                    </mat-error>
+
+                    <mat-error *ngIf="editDetails.get('firstName').hasError('pattern')">
+                        First Name must contains charatcers only.
+                    </mat-error>
+                </mat-form-field>
+                <br />
+                <br />
+                <!-- name field ends -->
+                <mat-form-field class="example-full-width">
+                    <!--Last name field -->
+                    <mat-label class="i1">Last Name*:</mat-label>
+                    <input matInput placeholder="Kumar" formControlName="lastName">
+
+                    <mat-icon matSuffix>person_add</mat-icon>
+                    <mat-hint>Last Name in characters only</mat-hint>
+
+                    <mat-error *ngIf="submitted && editDetails.get('lastName').hasError('required')">
+                        Last Name is Required!
+                    </mat-error>
+                    <mat-error *ngIf="editDetails.get('lastName').hasError('minlength')">
+                        Last Name should be atleast 4 characters long!
+                    </mat-error>
+
+                    <mat-error *ngIf="editDetails.get('lastName').hasError('maxlength')">
+                        Last Name can be atmax 20 characters long!
+                    </mat-error>
+
+                    <mat-error *ngIf="editDetails.get('lastName').hasError('pattern')">
+                        Last Name must contains charatcers only.
+                    </mat-error>
+                </mat-form-field>
+                <!-- Last name field ends -->
+                <br />
+                <br />
+                <mat-form-field class="example-full-width">
+                    <!-- email address field -->
+                    <mat-label class="i1">Username*:</mat-label>
+                    <input matInput type="email" placeholder="username@gmail.com" formControlName="username">
+                    <mat-icon matSuffix>mail_outline</mat-icon>
+                    <mat-hint>Input the fully qualified email address</mat-hint>
+                    <mat-error *ngIf="submitted && editDetails.get('username').hasError('required')">
+                        Username ID is Required!
+                    </mat-error>
+                    <mat-error *ngIf="editDetails.get('username').hasError('minlength')">
+                        Username should be atleast 4 characters long!
+                    </mat-error>
+
+                    <mat-error *ngIf="editDetails.get('username').hasError('maxlength')">
+                        Username can be atmax n characters long!
+                    </mat-error>
+                    <mat-error *ngIf="editDetails.get('username').hasError('pattern')">
+                        Username must follow this pattern!
+                    </mat-error>
+                    <!-- email address field ends -->
+                </mat-form-field>
+                <br />
+                <br />
+
+
+                <div class="col-lg-11">
+                    <div class="input-group mb-3 input-field">
+                        <span style="margin-top: 20px; margin-left:2px;">Choose Security Question</span>
+                        <select formControlName="securityQ">
+
+                            <option *ngFor="let question of securityQuestion" [ngValue]="question">
+                                {{ question }}
+                            </option>
+                        </select>
+                        <hr>
+                    </div>
+                    <!-- Validation Messages -->
+                    <div *ngIf="submitted && editDetails.controls.securityQ.errors">
+                        <div class="text-danger" *ngIf="editDetails.controls.securityQ.errors.required">
+                            Security Question is required ..!
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <mat-form-field class="example-full-width">
+                    <!-- Balance field -->
+                    <mat-label class="i1">Security Answer*:</mat-label>
+                    <input matInput type="text" placeholder="java" formControlName="securityA">
+                    <mat-icon matSuffix>question_answer</mat-icon>
+                    <mat-hint>Do not share to anyone</mat-hint>
+                    <mat-error *ngIf="submitted && editDetails.get('securityA').hasError('required')">
+                        Security Answer is Required!
+                    </mat-error>
+
+
+                </mat-form-field>
+
+
+
+                <br />
+                <br />
+                <!-- save button to save the inputs -->
+                <button class="btn btn-success" type="submit" >SAVE</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <!-- to reset the data being entered -->
+                <a routerLink="/changePassword"><button class="btn btn-primary">Change Password</button></a>&nbsp; &nbsp; &nbsp;
+                <button class="btn btn-danger" type="reset">Cancel</button> &nbsp; &nbsp; &nbsp;
+                <a routerLink="/home"><button class="btn btn-info" >Back to Home Page</button> </a>&nbsp; &nbsp; &nbsp;
+
+            </form>
+        </div>
+        <div class="col-lg-6">
+            <img class="m" src="assets/images/edituser.gif">
+        </div>
+    </div>
+</div>

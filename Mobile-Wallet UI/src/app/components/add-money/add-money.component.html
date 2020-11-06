@@ -1,0 +1,29 @@
+<app-header></app-header><br /><br />
+<h3 class="balance">Your Current Balance is: Rs {{message}} /-</h3>
+<div class="animated">
+    <h2 class="text-center mt-3" [hidden]="!temp">Chhose a Card to pay from your saved cards</h2>
+    <h2 class="text-center mt-3" [hidden]="!temp1">There are no saved cards add a card first </h2>
+    <hr>
+    <div class="container mt-5">
+        <div class="card-group" *ngFor="let c of cards">
+
+            <div class="col-12 rowCard">
+                <div class="card card-body "
+                    style="background-color: rgba(0, 0, 0, 0.021);border:5px outset white; border-radius: 10px;">
+                    <div class="card-body">
+                        <h3 class=" cardData textSize">CARD NO. {{c.cardNumber}}</h3>
+                        <h4 class=" cardData textSize">Card Holder's Name {{c.holderName}}</h4>
+                        <h5 class="cardData textSize">Valid Thru {{c.expMonth}}/{{c.expYear}}</h5>
+                    </div>
+                    <div class="col-1">
+                        <button class="btn btn-outline-delete" (click)="addMoney(c.cardNumber)"
+                            type="submit">Select</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-info" style="text-align: center;" (click)="addCard()">ADD Card</button>
+    </div>
+
+
+</div>

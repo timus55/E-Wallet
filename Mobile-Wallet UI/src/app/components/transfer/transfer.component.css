@@ -1,0 +1,86 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    color:red;
+  }
+  
+  .form-container > * {
+    width: 100%;
+  }
+  .style2 {
+    font-family:Cambria;
+    font-style: italic;
+    font-weight: bolder;
+    word-spacing: 1;
+    color:darkolivegreen;
+   }
+  .i1
+  {
+  font-size: 16px;
+  color: rgba(73, 5, 102, 0.849);
+  }
+  
+  input {
+    background-color: rgba(145, 80, 219, 0);
+    outline: none;
+    border: none;
+  }
+  
+  .animated{
+    animation: transitionIn 0.75s;
+  }
+  @keyframes transitionIn{
+    from{
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  
+  
+  input {
+    background-color: rgba(255, 255, 255, 0);
+    outline: none;
+    border: none;
+  }
+  
+  .b1
+  {
+    border-radius: 1cm;
+  }
+  .sign
+  {
+    color: rgb(3, 46, 139);
+  
+  }
+  
+  .example-button {
+    margin-top: 16px;
+  }
+  
+  .example-tooltip-red {
+    background: #b71c1c;
+  }
+  
+  .images{
+      height:400;
+      width: 500;
+      align-items: center;
+  }
+  
+  .card {
+    background-color: whitesmoke;
+    transition: background-color .5s;
+  }
+  
+  .card:hover {
+    background-color: gold;
+  }
+  
+  
+  .app-modal-window .modal-dialog {
+    width: 100px;
+  }

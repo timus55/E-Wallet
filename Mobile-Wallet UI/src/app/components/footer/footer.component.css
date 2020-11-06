@@ -1,0 +1,53 @@
+.navbar
+{
+    justify-content: space-between;
+    padding-bottom: 0.5cm;
+    padding-top: 0.5cm;
+}
+span{
+    padding-right: 1rem;
+}
+.a{
+ font-family: cursive;
+ font-size: medium;
+ color: rgb(255, 167, 251);
+
+}
+.image
+{
+    width: 5%;
+    height: 5%;
+}
+@media only screen and (max-width: 350px) {
+
+    .a
+    {
+        font-size: small;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+.a
+{
+    font-size: 32px;
+    margin-bottom: 0.3cm;
+   
+}
+.b
+{
+    font-size: 34px;
+}
+.navbar
+{
+    padding-top: 0.5cm;
+}
+}
+@media only screen and (min-width: 300px) and (max-width: 999px) {
+
+.navbar
+{
+    padding-bottom: 3cm;
+}
+}
+#footer{
+    position: fixed; 
+}
